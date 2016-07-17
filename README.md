@@ -92,7 +92,7 @@ the idea of a callback on success that we'd use with `XMLHttpRequest` or
 `$.ajax`.
 
 The interesting thing about this `fetch` code is that it highlights a
-powerful feature of a `thenable` object - we can chain each `then` call,
+powerful feature of a `thenable` object — we can chain each `then` call,
 and the next one receives the result of the previous one as its
 argument.
 
@@ -106,7 +106,7 @@ fetch('https://api.github.com/repos/jquery/jquery/commits').
 
 the line `then(res => res.json())` is getting the `Response` from
 `fetch` and using the `json` method (more on this in a bit) to turn it
-into JSON. Then it's passing the JSON to the next line, `then(json =.
+into JSON. Then it's passing the JSON to the next line, `then(json =>
 console.log(json))`, to be handled by that function.
 
 ### Body Mixin
@@ -199,4 +199,3 @@ Keep in mind that, while it is increasing, [browser support](http://caniuse.com/
 
 - [MDN Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [HTML5 Rocks Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
-
